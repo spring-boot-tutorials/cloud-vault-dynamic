@@ -1,3 +1,5 @@
+see: http://spring-guides.marcuschiu.com/spring-cloud/cloud-config-and-discovery/cloud-vault-config/spring-cloud-vault-dynamic.html
+
 Resources:
 - https://developer.hashicorp.com/vault/tutorials/app-integration/spring-reload-secrets
 - https://www.youtube.com/watch?v=E9XDfOVNN2U&t=3s
