@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: my-app
+  config:
+    import: vault://
+  cloud:
+    vault:
+      uri: http://localhost:8200
+      token: my-root-token
+      kv:
+        enabled: false
+      database:
+        enabled: true
+        role: my-app-role
+        backend: database
+      # On Vault Server tune lease renewal and expiry threshold for 2min max ttl
+      config:
+        lifecycle:
+          min-renewal: 30s
+          expiry-threshold: 10s
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/my_app_database'
+    driverClass: com.mysql.cj.jdbc.Driver
